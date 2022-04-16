@@ -1,0 +1,298 @@
+:root {
+    --maincolor:#5CDB95;
+}
+/********************NAVBAR************************/
+.navbar{
+
+}
+.navbar .logo{
+    color: var(--maincolor);
+    font-size: 25px;
+    font-weight: bold;
+}
+.navbar .logo:hover{
+    color: var(--maincolor);
+}
+.navbar .main_links .links li a{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+.navbar .main_links .btn {
+    margin-left: 15px;
+    border-radius: 50px;
+    text-transform: capitalize;
+}
+@media (max-width:991px) {
+    .navbar .main_links .btn {
+        margin: auto;
+    }
+}
+.navbar .main_links .links li a:hover {
+    color: var(--maincolor);
+}
+/********************NAVBAR************************/
+
+/***************************start slider****************************/
+.slide .carousel-item {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+/***************************start slider****************************/
+/*****************************start Overvie******************************/
+.overview {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.overview h2 {
+    color: var(--maincolor);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.overview p {
+    width: 80%;
+    margin: auto;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.overview h5 {
+    color: #777;
+    margin-bottom: 20px;
+    letter-spacing: 1.8px;
+}
+
+/*****************************end Overvie******************************/
+
+/*****************************Events******************************/
+.Events {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.Events h2 {
+    font-weight: bold;
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.Events p {
+    width: 80%;
+    margin: auto;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.Events .row {
+    margin-top: 60px;
+}
+
+.Events .row .card {
+    border: none;
+    text-align: left;
+}
+
+.Events .row .card img {
+    height: 250px;
+}
+
+.Events .row .card .card-body {
+    padding: 15px 0;
+}
+
+.Events .row .card .card-body h5 {
+    width: 100%;
+    color: #08526d;
+    font-size: 20px;
+}
+
+.Events .row .card .card-body span {
+    color: #777;
+}
+
+.Events .row .card .card-body p {
+    margin: 15px 0;
+    width: 100%;
+}
+
+.Events .row .card .card-body a {
+    color: var(--maincolor);
+    font-size: 15px;
+    font-weight: bold;
+}
+
+/*****************************Events******************************/
+
+/*****************************Organizations******************************/
+.Organizations {
+    padding: 100px 0;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
+.Organizations h2 {
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.Organizations p {
+    width: 80%;
+    margin: auto;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.Organizations .card-deck {
+    margin-top: 75px;
+}
+
+.Organizations .card-deck .card {
+    padding: 0;
+    border: none;
+}
+
+
+.Organizations .card-deck .card:hover {
+    cursor: pointer;
+}
+
+
+.Organizations .card-deck .card .card-body {
+    padding: 10px;
+}
+.Organizations .card-deck .card .card-body img{
+    max-width: 100%;
+}
+
+.Organizations .card-deck .card .card-body h3 {
+    color: var(--maincolor);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.Organizations .card-deck .card .card-body .don-btn{
+    float: left;
+    margin: 10px 0;
+    color: white;
+    background-color: var(--maincolor);
+    border-radius: 25px;
+    padding: 5px 12px;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+
+/*****************************Organizations******************************/
+/*****************************Statistics******************************/
+.Statistics {
+    padding: 100px 0;
+}
+
+.Statistics .box {
+    text-align: center;
+}
+
+@media (max-width:960px) {
+    .Statistics .box {
+        margin:20px 0;
+    }
+
+    .Statistics {
+        padding-top: 0;
+    }
+}
+
+.Statistics .box i {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: var(--maincolor);
+}
+
+.Statistics .box span {
+    color: black;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.Statistics .box p {
+    font-size: 15px;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    color: black;
+    font-weight: bold;
+}
+
+/*****************************Statistics******************************/
+/*****************************footer******************************/
+.footer {
+    padding: 100px 0;
+    background-color: #f7f7f7;
+
+}
+
+.footer .row .box h1 {
+    color: var(--maincolor);
+    text-transform: capitalize;
+    margin-top: 0;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.footer .row .box p {
+    color: #777;
+    text-transform: capitalize;
+
+}
+@media (max-width:990px) {
+    .footer .row .box:nth-child(2) {
+        margin: 25px 0;
+    }
+    .footer .row .box:nth-child(3) {
+        margin: 25px 0;
+    }
+}
+
+.footer .row .box i {
+    color: var(--maincolor);
+}
+
+.footer .row .box a {
+    text-decoration: none;
+    color: var(--maincolor);
+    text-transform: capitalize;
+    font-weight: 900;
+}
+
+.footer .row .box h3 {
+    color: var(--maincolor);
+    text-transform: capitalize;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+
+
+.footer .row .box .links ul.active {
+    margin-right: 35px;
+}
+
+.footer .row .box .links ul li {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+/*****************************footer******************************/
