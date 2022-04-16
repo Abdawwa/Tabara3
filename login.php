@@ -1,7 +1,45 @@
 <?php
 require_once "config.php";
+require_once "functions/validate.php";
+?>
 
 
+
+<?php
+
+if (isset($_POST['submit'])) {
+    $adminEmail = trim($_POST['Aemail']);
+    $adminPass = trim($_POST['Apass']);
+
+
+    if (ChickEmpty($adminEmail) && ChickEmpty($adminPass)) {
+        if (validEmail($adminEmail)) {
+            $sql = "SELECT * FROM `users` WHERE user_email ='$adminEmail' AND user_password='$adminPass'";
+            $result = mysqli_query($conn, $sql);
+            //$info = mysqli_fetch_assoc($result);
+            $row = mysqli_num_rows($result);
+            if ($row > 0) {
+                $info = mysqli_fetch_array($result); //Get Password From Database
+                $dbPass = $info['admin_pass'];
+                header("location:home.php");
+                /*if (password_verify($adminPass, $dbPass)) {
+                    session_start();
+                    $_SESSION['admin_email'] = $adminEmail;
+                    header("location:index.php");
+                } else {
+                    $error_message = "Password Error";
+                }*/
+            } else {
+                $error_message = "Email or Password Error";
+            }
+        } else {
+            $error_message = "Email Not Valid";
+        }
+    } else {
+        $error_message = "Please fill All Filds";
+    }
+    require_once "functions/messagees.php";
+}
 ?>
 
 
