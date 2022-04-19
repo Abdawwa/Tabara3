@@ -8,27 +8,27 @@ require_once "functions/validate.php";
 <?php
 
 if (isset($_POST['submit'])) {
-    $adminEmail = trim($_POST['Aemail']);
-    $adminPass = trim($_POST['Apass']);
+    $userEmail = trim($_POST['userEmail']);
+    $userPass = trim($_POST['userPass']);
 
 
-    if (ChickEmpty($adminEmail) && ChickEmpty($adminPass)) {
-        if (validEmail($adminEmail)) {
-            $sql = "SELECT * FROM `users` WHERE user_email ='$adminEmail' AND user_password='$adminPass'";
+    if (ChickEmpty($userEmail) && ChickEmpty($userPass)) {
+        if (validEmail($userEmail)) {
+            $sql = "SELECT * FROM `users` WHERE user_email ='$userEmail'/* AND user_password='$adminPass'*/";
             $result = mysqli_query($conn, $sql);
             //$info = mysqli_fetch_assoc($result);
             $row = mysqli_num_rows($result);
             if ($row > 0) {
                 $info = mysqli_fetch_array($result); //Get Password From Database
-                $dbPass = $info['admin_pass'];
-                header("location:home.php");
-                /*if (password_verify($adminPass, $dbPass)) {
+                $dbPass = $info['user_password'];
+                //header("location:home.php");
+                if (password_verify($userPass, $dbPass)) {
                     session_start();
-                    $_SESSION['admin_email'] = $adminEmail;
-                    header("location:index.php");
+                    $_SESSION['user_email'] = $userEmail;
+                    header("location:test.php");
                 } else {
                     $error_message = "Password Error";
-                }*/
+                }
             } else {
                 $error_message = "Email or Password Error";
             }
@@ -120,8 +120,8 @@ if (isset($_POST['submit'])) {
             <form class="signup-form" enctype="multipart/form-data" method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <h2 class="text-center">Login</h2>
                 <hr>
-                <div class="form-group"> <input type="text" name="Aemail" class="form-control" placeholder="Email Address"> </div>
-                <div class="form-group"> <input type="password" name="Apass" class="form-control" placeholder="Password"> </div>
+                <div class="form-group"> <input type="text" name="userEmail" class="form-control" placeholder="Email Address"> </div>
+                <div class="form-group"> <input type="password" name="userPass" class="form-control" placeholder="Password"> </div>
                 <div class="form-group text-center"> <button type="submit" name="submit" class="btn btn-blue btn-block">Start Now</button> </div>
             </form>
         </div>

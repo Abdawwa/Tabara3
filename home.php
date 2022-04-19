@@ -266,7 +266,7 @@
 
 
 
-    <script src="main.js"></script>
+    <script src="js/main.js"></script>
     <!--<script src="js/all.min.js"></script>From Font Awesome (6)-->
     <script src="js/bootstrap.bundle.min.js"></script>
     <!--From Bootstrap-->
