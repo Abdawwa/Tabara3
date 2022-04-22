@@ -12,7 +12,6 @@ if (isset($_POST['submit']) && isset($_POST['gender'])) {
     $userGender = $_POST['gender'];
 
 
-
     if (ChickEmpty($userName) && ChickEmpty($userEmail) && ChickEmpty($userPass) && ChickEmpty($userPhone) && ChickEmpty($userGender)) {
         if (validEmail($userEmail)) {
             $sql2 = "SELECT `user_email` FROM `users` WHERE user_email = '$userEmail'";
@@ -36,8 +35,6 @@ if (isset($_POST['submit']) && isset($_POST['gender'])) {
     }
     //require_once 'functions/messagees.php';
 }
-
-#222
 
 
 ?>
@@ -94,7 +91,7 @@ if (isset($_POST['submit']) && isset($_POST['gender'])) {
             width: 250px;
         }
 
-        @media (max-width:575px) {
+        @media (max-width: 575px) {
             .form {
                 padding: 0;
             }
@@ -109,51 +106,57 @@ if (isset($_POST['submit']) && isset($_POST['gender'])) {
 </head>
 
 <body>
-    <div class="signup">
-        <div class="container">
-            <div class="row col-md-6 d-flex justify-content-center form">
-                <h2>Registration</h2>
-                <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
-                    <div class="form-group ">
-                        <label for="name">Username</label>
-                        <input type="text" class="form-control" name="userName" id="name" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+<div class="signup">
+    <div class="container">
+        <div class="row col-md-6 d-flex justify-content-center form">
+            <h2>Registration</h2>
+            <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST" enctype="multipart/form-data">
+                <div class="form-group ">
+                    <label for="name">Username</label>
+                    <input type="text" class="form-control" name="userName" id="name" placeholder="Username"
+                           aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="form-group ">
+                    <label for="Email">Email</label>
+                    <input type="text" class="form-control" name="userEmail" id="Email" placeholder="Email"
+                           aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="form-group ">
+                    <label for="Password">Password</label>
+                    <input type="Password" class="form-control" name="userPassword" id="Password" placeholder="Password"
+                           aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="form-group ">
+                    <label for="Phone">Phone</label>
+                    <input type="text" class="form-control" name="userPhone" id="Phone" placeholder="Phone"
+                           aria-label="Username" aria-describedby="basic-addon1">
+                </div>
+                <div class="form-group">
+                    <label>Gender</label><br>
+                    <div class="gender">
+                        <input type="radio" id="Male" name="gender" value="Male">
+                        <label for="Male">Male</label><br>
+                        <input type="radio" id="Female" name="gender" value="Female">
+                        <label for="Female">Female</label><br>
                     </div>
-                    <div class="form-group ">
-                        <label for="Email">Email</label>
-                        <input type="text" class="form-control" name="userEmail" id="Email" placeholder="Email" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="form-group ">
-                        <label for="Password">Password</label>
-                        <input type="Password" class="form-control" name="userPassword" id="Password" placeholder="Password" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="form-group ">
-                        <label for="Phone">Phone</label>
-                        <input type="text" class="form-control" name="userPhone" id="Phone" placeholder="Phone" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="form-group">
-                        <label>Gender</label><br>
-                        <div class="gender">
-                            <input type="radio" id="Male" name="gender" value="Male">
-                            <label for="Male">Male</label><br>
-                            <input type="radio" id="Female" name="gender" value="Female">
-                            <label for="Female">Female</label><br>
-                        </div>
-                    </div>
-                    <div class="footer">
-                        <?php if (isset($success_message) && $success_message != "") { ?>
-                            <p class="alert alert-success text-center" style="top: 5px; left: -10px;"><?php echo $success_message ?></p>
-                        <?php } ?>
+                </div>
+                <div class="footer">
+                    <?php if (isset($success_message) && $success_message != "") { ?>
+                        <p class="alert alert-success text-center"
+                           style="top: 5px; left: -10px;"><?php echo $success_message ?></p>
+                    <?php } ?>
 
-                        <?php if (isset($error_message) && $error_message != "") { ?>
-                            <p class="alert alert-danger text-center" style="top: 5px; left: -10px;"><?php echo $error_message ?></p>
-                        <?php } ?>
+                    <?php if (isset($error_message) && $error_message != "") { ?>
+                        <p class="alert alert-danger text-center"
+                           style="top: 5px; left: -10px;"><?php echo $error_message ?></p>
+                    <?php } ?>
 
-                        <button type="submit" class="sub-btn" name="submit">Signup</button>
-                    </div>
-                </form>
-            </div>
+                    <button type="submit" class="sub-btn" name="submit">Signup</button>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 </body>
 
 </html>
