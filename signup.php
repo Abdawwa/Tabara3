@@ -35,8 +35,6 @@ if (isset($_POST['submit']) && isset($_POST['gender'])) {
     }
     //require_once 'functions/messagees.php';
 }
-
-
 ?>
 
 
