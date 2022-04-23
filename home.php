@@ -86,6 +86,9 @@ include 'header.php';
                 </div>
             </div>
         </div>
+        <div class="mt-5 link">
+            <a class="vm-org" style="background-color: #5CDB95; color:white ;padding:15px; text-decoration: none; border-radius:25px;" href="events.php">View More</a>
+        </div>
     </div>
 </div>
 <!--------------------------------Events---------------------------------->

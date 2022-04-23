@@ -14,7 +14,7 @@ $start_from = ($page - 1) * 03;
 
 ?>
 
-<div class="Events" style="padding: 50px 0;">
+<div class="Events" style="padding: 50px 0;background-color: #f7f7f7;">
     <div class="container">
         <div class="row">
 
