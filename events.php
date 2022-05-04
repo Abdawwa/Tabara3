@@ -1,7 +1,14 @@
 <?php
 require_once "config.php";
-include "header.php";
 
+
+//for header
+session_start();
+if (isset($_SESSION['user_email'])) {
+    include "log_header.php";
+} else {
+    include 'header.php';
+}
 
 //for pagination
 if (isset($_GET['page'])) {

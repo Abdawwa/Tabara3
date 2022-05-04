@@ -8,7 +8,14 @@
 <body>-->
 <!---------------------------------------------navbar------------------------------------------>
 <?php
-include 'header.php';
+session_start();
+if(isset($_SESSION['user_email'])){
+    include "log_header.php";
+}
+else{
+    include 'header.php';
+
+}
 ?>
 
 <!---------------------------------------------navbar------------------------------------------>

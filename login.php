@@ -25,7 +25,7 @@ if (isset($_POST['submit'])) {
                 if (password_verify($userPass, $dbPass)) {
                     session_start();
                     $_SESSION['user_email'] = $userEmail;
-                    header("location:test.php");
+                    header("location:home.php");
                 } else {
                     $error_message = "Password Error";
                 }

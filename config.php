@@ -2,7 +2,7 @@
 $serverName = "localhost";
 $dbuser = "root";
 $password = "";
-$dbname = "tabara3";
+$dbname = "tabara3_new";
 
 $conn = mysqli_connect($serverName , $dbuser , $password , $dbname);
 
