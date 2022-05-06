@@ -35,9 +35,9 @@ $start_from = ($page - 1) * 03;
                         <img class="card-img-top" src="home_img/img1.jpg">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $row['event_name'] ?></h5>
-                            <span></span>
-                            <p class="card-text"></p>
-                            <a href=""></a>
+                            <span><?php echo $row['event_created_at'] ?></span>
+                            <p class="card-text"><?php echo $row['event_description'] ?></p>
+                            <a class="btn btn-success btn rounded-pill text-white" href="">Enroll</a>
                         </div>
                     </div>
             <?php
