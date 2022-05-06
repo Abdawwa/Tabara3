@@ -51,12 +51,9 @@ if (isset($_POST['submit'])) {
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
         <title>Login</title>
         <style>
-            body {
-                background-color: rgb(127 188 255);
-            }
-
             .padding {
-                padding: 5rem !important
+                padding: 5rem !important;
+                background-color: rgb(127 188 255);
             }
 
             .signup-form {
@@ -64,6 +61,7 @@ if (isset($_POST['submit'])) {
                 padding: 45px;
                 border-radius: 25px;
                 width: 500px;
+                max-width: 100%;
                 margin: auto;
             }
 
@@ -83,7 +81,7 @@ if (isset($_POST['submit'])) {
             .signup-form input {
                 border: 1px solid #eee;
                 height: 38px;
-                box-shadow: none !important
+                box-shadow: none !important;
             }
 
             .btn-blue {
@@ -109,7 +107,7 @@ if (isset($_POST['submit'])) {
     </head>
 
     <body>
-    <div class="padding container d-flex justify-content-center">
+    <div class="padding d-flex justify-content-center">
         <div class="col-md-10 col-md-offset-1">
             <form class="signup-form" enctype="multipart/form-data" method="POST"
                   action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -125,7 +123,6 @@ if (isset($_POST['submit'])) {
         </div>
     </div>
     </body>
-
     </html>
 <?php
 include "footer.php";
