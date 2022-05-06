@@ -25,7 +25,7 @@ if (isset($_POST['submit']) && isset($_POST['gender'])) {
                 VALUES ('$userName','$userEmail','$HashedPassword','$userPhone','$userGender')";
                 $result = mysqli_query($conn, $sql);
                 if ($result) {
-                    $success_message = "Admin Add successfully";
+                    $success_message = "Congrats!! You can Login";
                 }
             }
         } else {
@@ -139,7 +139,7 @@ if (isset($_POST['submit']) && isset($_POST['gender'])) {
                         <label for="Female">Female</label><br>
                     </div>
                 </div>
-                <div class="footer">
+                <div class="footer-msg">
                     <?php if (isset($success_message) && $success_message != "") { ?>
                         <p class="alert alert-success text-center"
                            style="top: 5px; left: -10px;"><?php echo $success_message ?></p>
