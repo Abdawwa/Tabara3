@@ -1,6 +1,9 @@
 :root {
     --maincolor:#5CDB95;
 }
+html {
+    scroll-behavior: smooth;
+}
 /********************NAVBAR************************/
 .navbar{
 

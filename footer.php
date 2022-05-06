@@ -4,11 +4,7 @@
         <div class="row">
             <div class="col-lg-6 box">
                 <h1>tabara3</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam itaque, est facere culpa debitis
-                    aspernatur accusantium perferendis esse praesentium harum qui provident eius placeat corrupti
-                    facilis, deserunt, accusamus neque nobis?</p>
-                <i class="fa-solid fa-circle-arrow-right"></i>
-                <a href="#">read more</a>
+                <p>Tabara3 is a website that helps the community to find a suitable event for volunteering and it was founded in 2022.</p>
             </div>
             <div class="col-lg-3 col-md box">
                 <h3>helpful links</h3>
@@ -16,7 +12,7 @@
                     <ul class="list-unstyled active">
                         <li>
                             <i class="fa-solid fa-chevron-right"></i>
-                            <a href="#!">about</a>
+                            <a href="home.php">about</a>
                         </li>
                         <li>
                             <i class="fa-solid fa-chevron-right"></i>

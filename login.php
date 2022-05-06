@@ -1,6 +1,7 @@
 <?php
 require_once "config.php";
 require_once "functions/validate.php";
+include "header.php"
 ?>
 
 
@@ -92,16 +93,15 @@ if (isset($_POST['submit'])) {
         }
 
         .btn-blue {
-            background: #44c5ee;
+            background: #28a745;
             padding: 10px 28px;
-            border: 2px solid #44c5ee;
+            border: 2px solid #28a745;
             color: #fff;
             border-radius: 50px;
             font-weight: 700;
             letter-spacing: 0.08em;
             -webkit-transition: 0.5s all;
             transition: 0.5s all;
-            box-shadow: 0px 0px 60px 0px rgba(68, 197, 238, 0.6);
             outline: none !important
         }
 
@@ -129,3 +129,6 @@ if (isset($_POST['submit'])) {
 </body>
 
 </html>
+<?php
+include "footer.php";
+?>

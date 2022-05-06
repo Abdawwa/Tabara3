@@ -8,13 +8,12 @@
 <body>-->
 <!---------------------------------------------navbar------------------------------------------>
 <?php
+include "config.php";
 session_start();
-if(isset($_SESSION['user_email'])){
+if (isset($_SESSION['user_email'])) {
     include "log_header.php";
-}
-else{
+} else {
     include 'header.php';
-
 }
 ?>
 
@@ -40,11 +39,11 @@ else{
 </div>
 <!---------------------------------------------Slide Show---------------------------->
 <!---------------------------------------------over Viwe tabara3------------------------------------------>
-<div class="overview">
+<div class="overview" id="overview">
     <div class="container">
         <h2>Tabara3 overview</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus voluptas consectetur aliquid temporibus
-            quo! Quo, vel id laboriosam modi dolore sequi ab perferendis nobis odio debitis ratione, libero laborum rem?
+        <p>Tabara3 is a website that helps the community to find a suitable event for volunteering and it was founded in
+            2022.
         </p>
         <h5>Let's Start Today</h5>
     </div>
@@ -55,46 +54,30 @@ else{
 <div class="Events">
     <div class="container">
         <h2>Events</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe placeat officiis amet vitae reiciendis qui
-            obcaecati explicabo, aut, consectetur maiores consequuntur architecto tempore? Odit ipsa eos earum
-            dignissimos illum maiores!</p>
         <div class="row">
-            <div class="card col-lg-4 col-md-6">
-                <img class="card-img-top" src="home_img/img1.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h5>
-                    <span>March 24 2019</span>
-                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum blanditiis id
-                        magni inventore eligendi maxime rem sit asperiores necessitatibus eos consequuntur vitae,
-                        tempore dignissimos atque mollitia, impedit voluptatum illum illo?</p>
-                    <a href="">Read More</a>
-                </div>
-            </div>
-            <div class="card col-lg-4 col-md-6">
-                <img class="card-img-top" src="home_img/img2.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h5>
-                    <span>March 24 2019</span>
-                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum blanditiis id
-                        magni inventore eligendi maxime rem sit asperiores necessitatibus eos consequuntur vitae,
-                        tempore dignissimos atque mollitia, impedit voluptatum illum illo?</p>
-                    <a href="">Read More</a>
-                </div>
-            </div>
-            <div class="card col-lg-4 col-md-6">
-                <img class="card-img-top" src="home_img/img3.jpg">
-                <div class="card-body">
-                    <h5 class="card-title">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</h5>
-                    <span>March 24 2019</span>
-                    <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum blanditiis id
-                        magni inventore eligendi maxime rem sit asperiores necessitatibus eos consequuntur vitae,
-                        tempore dignissimos atque mollitia, impedit voluptatum illum illo?</p>
-                    <a href="">Read More</a>
-                </div>
-            </div>
+            <?php
+            $sql = "SELECT * FROM `events` ORDER BY `event_enrolled` DESC , `event_created_at` ASC LIMIT 3";
+            $result = mysqli_query($conn, $sql);
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_array($result)) {
+                    ?>
+                    <div class="card col-lg-4 col-md-6">
+                        <img class="card-img-top" src="home_img/img1.jpg">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo $row['event_name'] ?></h5>
+                            <span><?php echo $row['event_created_at'] ?></span>
+                            <p class="card-text"><?php echo $row['event_description'] ?></p>
+                        </div>
+                    </div>
+                    <?php
+                }
+            }
+            ?>
         </div>
         <div class="mt-5 link">
-            <a class="vm-org" style="background-color: #5CDB95; color:white ;padding:15px; text-decoration: none; border-radius:25px;" href="events.php">View More</a>
+            <a class="vm-org"
+               style="background-color: #5CDB95; color:white ;padding:15px; text-decoration: none; border-radius:25px;"
+               href="events.php">View More</a>
         </div>
     </div>
 </div>
@@ -104,34 +87,31 @@ else{
 <div class="Organizations">
     <div class="container">
         <h2>Organizations</h2>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe placeat officiis amet vitae reiciendis qui
-            obcaecati explicabo, aut, consectetur maiores consequuntur architecto tempore? Odit ipsa eos earum
-            dignissimos illum maiores!</p>
         <div class="card-deck">
-            <div class="card col-lg-4 col-md-6">
-                <div class="card-body">
-                    <img src="home_img/img1.jpg">
-                    <h3 class="card-title">Organization 1</h3>
-                    <a class="don-btn">donate now</a>
-                </div>
-            </div>
-            <div class="card col-lg-4 col-md-6">
-                <div class="card-body">
-                    <img src="home_img/img2.jpg">
-                    <h3 class="card-title">Organization 2</h3>
-                    <a class="don-btn">donate now</a>
-                </div>
-            </div>
-            <div class="card col-lg-4 col-md-6">
-                <div class="card-body">
-                    <img src="home_img/img3.jpg">
-                    <h3 class="card-title">Organization 3</h3>
-                    <a class="don-btn">donate now</a>
-                </div>
-            </div>
+        <?php
+        $sql2 = "SELECT * FROM `organization` LIMIT 3";
+        $result2 = mysqli_query($conn, $sql2);
+        if (mysqli_num_rows($result2) > 0) {
+            while ($row2 = mysqli_fetch_array($result2)) {
+                ?>
+
+                    <div class="card col-lg-4 col-md-6">
+                        <div class="card-body">
+                            <img src="home_img/img1.jpg">
+                            <h3 class="card-title"><?php echo $row2['org_name']?></h3>
+                            <a class="don-btn" href="<?php echo $row2['org_link']?>" target="_blank">donate now</a>
+                        </div>
+                    </div>
+
+                <?php
+            }
+        }
+        ?>
         </div>
         <div class="mt-5 link">
-            <a class="vm-org" style="background-color: #5CDB95; color:white ;padding:15px; text-decoration: none; border-radius:25px;" href="organization.php">View More</a>
+            <a class="vm-org"
+               style="background-color: #5CDB95; color:white ;padding:15px; text-decoration: none; border-radius:25px;"
+               href="organization.php">View More</a>
         </div>
     </div>
 </div>

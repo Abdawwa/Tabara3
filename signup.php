@@ -1,6 +1,7 @@
 <?php
 require_once "config.php";
 require_once "functions/validate.php";
+include "header.php";
 ?>
 
 <?php

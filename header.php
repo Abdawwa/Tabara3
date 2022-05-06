@@ -25,10 +25,10 @@
         <div class="collapse navbar-collapse main_links" id="navbarSupportedContent">
             <ul class="navbar-nav  ml-auto links">
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> Home</a>
+                    <a class="nav-link" href="home.php"> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"> About Us </a>
+                    <a class="nav-link" href="#overview"> About Us </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#"> Contact Us </a>
