@@ -32,7 +32,7 @@ $start_from = ($page - 1) * 03;
                 while ($row = mysqli_fetch_array($result)) {
             ?>
                     <div class="card col-lg-4 col-md-6">
-                        <img class="card-img-top" src="home_img/img1.jpg">
+                        <img class="card-img-top" src="images/img1.jpg">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $row['event_name'] ?></h5>
                             <span><?php echo $row['event_created_at'] ?></span>

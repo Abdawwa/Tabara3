@@ -32,7 +32,7 @@ $start_from = ($page - 1) * 03;
             ?>
                     <div class="card col-lg-4 col-md-6">
                         <div class="card-body">
-                            <img src="home_img/img1.jpg">
+                            <img src="images/img1.jpg">
                             <h3 class="card-title"><?php echo $row["org_name"] ?></h3>
                             <a class="don-btn" href="<?php echo $row["org_link"] ?>">donate now</a>
                         </div>

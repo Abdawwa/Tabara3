@@ -37,7 +37,7 @@ $info = mysqli_fetch_array($result);
             <div class="collapse navbar-collapse main_links" id="navbarSupportedContent">
                 <ul class="navbar-nav align-items-center  ml-auto links">
                     <li class="nav-item">
-                        <a class="nav-link" href="#"> Home</a>
+                        <a class="nav-link" href="home.php"> Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#"> About Us </a>
@@ -52,6 +52,7 @@ $info = mysqli_fetch_array($result);
                             <?php echo $info['user_name']; ?>
                         </button>
                         <div class="dropdown-menu" style="left: -20px;" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="profile.php">Profile</a>
                             <a class="dropdown-item" href="logout.php">Logout</a>
                         </div>
                     </li>

@@ -22,13 +22,13 @@ if (isset($_SESSION['user_email'])) {
 <div id="main-slider" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img src="home_img/img1.jpg" class="d-block w-100 h-100">
+            <img src="images/img1.jpg" class="d-block w-100 h-100">
         </div>
         <div class="carousel-item">
-            <img src="home_img/img2.jpg" class="d-block w-100 h-100">
+            <img src="images/img2.jpg" class="d-block w-100 h-100">
         </div>
         <div class="carousel-item">
-            <img src="home_img/img3.jpg" class="d-block w-100 h-100">
+            <img src="images/img3.jpg" class="d-block w-100 h-100">
         </div>
     </div>
     <ol class="carousel-indicators">
@@ -62,11 +62,12 @@ if (isset($_SESSION['user_email'])) {
                 while ($row = mysqli_fetch_array($result)) {
                     ?>
                     <div class="card col-lg-4 col-md-6">
-                        <img class="card-img-top" src="home_img/img1.jpg">
+                        <img class="card-img-top" src="images/img1.jpg">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $row['event_name'] ?></h5>
                             <span><?php echo $row['event_created_at'] ?></span>
                             <p class="card-text"><?php echo $row['event_description'] ?></p>
+                            <a class="btn btn-success btn rounded-pill text-white">Enroll</a>
                         </div>
                     </div>
                     <?php
@@ -97,7 +98,7 @@ if (isset($_SESSION['user_email'])) {
 
                     <div class="card col-lg-4 col-md-6">
                         <div class="card-body">
-                            <img src="home_img/img1.jpg">
+                            <img src="images/img1.jpg">
                             <h3 class="card-title"><?php echo $row2['org_name']?></h3>
                             <a class="don-btn" href="<?php echo $row2['org_link']?>" target="_blank">donate now</a>
                         </div>

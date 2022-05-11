@@ -9,7 +9,7 @@ if (isset($_POST['submit'])) {
 
     if (ChickEmpty($userEmail) && ChickEmpty($userPass)) {
         if (validEmail($userEmail)) {
-            $sql = "SELECT * FROM `users` WHERE user_email ='$userEmail'/* AND user_password='$adminPass'*/";
+            $sql = "SELECT * FROM `users` WHERE user_email ='$userEmail'";
             $result = mysqli_query($conn, $sql);
             //$info = mysqli_fetch_assoc($result);
             $row = mysqli_num_rows($result);
@@ -20,6 +20,7 @@ if (isset($_POST['submit'])) {
                 if (password_verify($userPass, $dbPass)) {
                     session_start();
                     $_SESSION['user_email'] = $userEmail;
+                    $user_id = $_SESSION['id'];
                     header("location:home.php");
                 } else {
                     $error_message = "Password Error";

@@ -133,14 +133,102 @@ html {
 }
 
 /*****************************Events******************************/
+/*****************************Profile********************************/
+/*the profile card info design */
+.card {
+    border: solid 1px #5CDB95;
+    border-radius: 2em;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer
+}
 
+.card:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #FFFFFF;
+    transform: scaleY(1);
+    transition: all 0.5s;
+    transform-origin: bottom
+}
+
+.card:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #5CDB95;
+    transform: scaleY(0);
+    transition: all 0.5s;
+    transform-origin: bottom
+}
+
+.card:hover::after {
+    transform: scaleY(1)
+}
+
+.fonts {
+    font-size: 11px
+}
+
+.social-list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    padding: 0
+}
+
+.social-list li {
+    padding: 10px;
+    color: #8E24AA;
+    font-size: 19px
+}
+
+.buttons button:nth-child(1) {
+    border: 1px solid #8E24AA !important;
+    color: #8E24AA;
+    height: 40px
+}
+
+.buttons button:nth-child(1):hover {
+    border: 1px solid #8E24AA !important;
+    color: #fff;
+    height: 40px;
+    background-color: #8E24AA
+}
+
+.buttons button:nth-child(2) {
+    border: 1px solid #8E24AA !important;
+    background-color: #8E24AA;
+    color: #fff;
+    height: 40px
+}
+
+.user-profile-pic-profile {
+    width: 5rem;
+    height: 5rem;
+}
+
+#profile-settings{
+    display: none;
+}
+/******************************Profile*********************************/
 /*****************************Organizations******************************/
 .Organizations {
     padding: 100px 0;
     text-align: center;
     background-color: #f7f7f7;
 }
-
+.profile-card{
+    margin: auto;
+}
 .Organizations h2 {
     font-weight: bold;
     font-size: 40px;
