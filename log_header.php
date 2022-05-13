@@ -21,6 +21,7 @@ $info = mysqli_fetch_array($result);
     <link rel="stylesheet" href="css/mainstyle.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script><!-- -->
@@ -61,6 +62,7 @@ $info = mysqli_fetch_array($result);
             </div>
         </div>
     </nav>
+
     <!--<div class="btn-group">
         <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             click
