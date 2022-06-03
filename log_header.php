@@ -31,7 +31,7 @@ $info = mysqli_fetch_array($result);
     <!---------------------------------------------navbar------------------------------------------>
     <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top">
         <div class="container">
-            <a class="navbar-brand logo" href="#"> Tabara3</a>
+            <a class="navbar-brand logo" href="home.php"> Tabara3</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

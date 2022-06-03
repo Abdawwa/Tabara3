@@ -89,7 +89,7 @@ if (isset($_POST['submit'])) {
             $result = mysqli_query($conn, $sql);
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_array($result)) {
-                    ?>
+            ?>
                     <div class="card col-lg-4 col-md-6">
                         <img class="card-img-top" src="images/img1.jpg">
                         <div class="card-body">
@@ -97,14 +97,11 @@ if (isset($_POST['submit'])) {
                             <span><?php echo $row['event_created_at'] ?></span>
                             <p class="card-text"><?php echo $row['event_description'] ?></p>
                             <?php if (isset($_SESSION['user_email'])) {
-                                ?>
+                            ?>
                                 <form method="POST" enctype="multipart/form-data">
-                                    <input type="hidden"
-                                           value="<?php echo $info['id'] ?>"
-                                           name="user_id">
+                                    <input type="hidden" value="<?php echo $info['id'] ?>" name="user_id">
                                     <input type="hidden" value="<?php echo $row['event_id'] ?>" name="event_id">
-                                    <button type="submit" class="btn btn-success btn rounded-pill text-white"
-                                            name="submit">
+                                    <button type="submit" class="btn btn-success btn rounded-pill text-white" name="submit">
                                         Enroll
                                     </button>
                                 </form>
@@ -115,15 +112,13 @@ if (isset($_POST['submit'])) {
                             <?php } ?>
                         </div>
                     </div>
-                    <?php
+            <?php
                 }
             }
             ?>
         </div>
         <div class="mt-5 link">
-            <a class="vm-org"
-               style="background-color: #5CDB95; color:white ;padding:15px; text-decoration: none; border-radius:25px;"
-               href="events.php">View More</a>
+            <a class="vm-org" style="background-color: #5CDB95; color:white ;padding:15px; text-decoration: none; border-radius:25px;" href="events.php">View More</a>
         </div>
     </div>
 </div>
@@ -139,7 +134,7 @@ if (isset($_POST['submit'])) {
             $result2 = mysqli_query($conn, $sql2);
             if (mysqli_num_rows($result2) > 0) {
                 while ($row2 = mysqli_fetch_array($result2)) {
-                    ?>
+            ?>
 
                     <div class="card col-lg-4 col-md-6">
                         <div class="card-body">
@@ -149,15 +144,13 @@ if (isset($_POST['submit'])) {
                         </div>
                     </div>
 
-                    <?php
+            <?php
                 }
             }
             ?>
         </div>
         <div class="mt-5 link">
-            <a class="vm-org"
-               style="background-color: #5CDB95; color:white ;padding:15px; text-decoration: none; border-radius:25px;"
-               href="organization.php">View More</a>
+            <a class="vm-org" style="background-color: #5CDB95; color:white ;padding:15px; text-decoration: none; border-radius:25px;" href="organization.php">View More</a>
         </div>
     </div>
 </div>

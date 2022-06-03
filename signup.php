@@ -7,6 +7,7 @@ if (isset($_POST['submit'])) {
     $userEmail = trim($_POST['userEmail']);
     $userPass = trim($_POST['userPassword']);
     $userPhone = trim($_POST['userPhone']);
+    $barth_date = $_POST['b_date'];
     if (isset($_POST['gender']))
         $userGender = $_POST['gender'];
 
@@ -19,8 +20,8 @@ if (isset($_POST['submit'])) {
                 $error_message = "Email is used";
             } else {
                 $HashedPassword = password_hash($userPass, PASSWORD_DEFAULT);
-                $sql = "INSERT INTO users (`user_name`,`user_email`,`user_password`,`user_phone`,`user_gender`)
-                VALUES ('$userName','$userEmail','$HashedPassword','$userPhone','$userGender')";
+                $sql = "INSERT INTO users (`user_name`,`user_email`,`user_password`,`user_phone`,`user_gender`,`barth_date`)
+                VALUES ('$userName','$userEmail','$HashedPassword','$userPhone','$userGender','$barth_date')";
                 $result = mysqli_query($conn, $sql);
                 if ($result) {
                     $success_message = "Congrats!! You can Login";
@@ -152,6 +153,8 @@ if (isset($_POST['submit'])) {
 
                         <button type="submit" class="sub-btn" name="submit">Signup</button>
                     </div>
+
+                    <input type="date" name="b_date">
                 </form>
             </div>
         </div>

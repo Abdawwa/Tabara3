@@ -30,7 +30,7 @@ $result2 = mysqli_query($conn, $event_enrolled_query);
                         </div>
                         <div class="text-center">
                             <img src="images/img1.jpg"
-                                 class="rounded-circle user-profile-pic-profile ">
+                                class="rounded-circle user-profile-pic-profile ">
                         </div>
                         <div class="text-center mt-3">
                             <span class="bg-secondary p-1 px-4 rounded text-white"><?php echo $info['user_name']; ?></span>
