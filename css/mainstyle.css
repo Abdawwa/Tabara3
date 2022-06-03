@@ -217,6 +217,25 @@ html {
     height: 5rem;
 }
 
+.paypal {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.paypal button {
+    display: inline-block;
+    padding: 10px 20px 7px 20px;
+    background-color: #f7f7f7;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    width: 215px;
+}
+
+.paypal button:hover {
+    background-color: #5CDB95;
+}
+
 #profile-settings{
     display: none;
 }

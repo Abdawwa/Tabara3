@@ -32,9 +32,9 @@ $start_from = ($page - 1) * 03;
             ?>
                     <div class="card col-lg-4 col-md-6">
                         <div class="card-body">
-                            <img src="images/img1.jpg">
+                            <img width="300px" height="300px" src="images/<?php echo $row['org_img']?>">
                             <h3 class="card-title"><?php echo $row["org_name"] ?></h3>
-                            <a class="don-btn" href="<?php echo $row["org_link"] ?>">donate now</a>
+                            <a class="don-btn" href="paypal.php" target="_blank">donate</a>
                         </div>
                     </div>
             <?php
@@ -68,18 +68,18 @@ $start_from = ($page - 1) * 03;
     $pr_result = mysqli_query($conn, $pr_query);
     $total_record = mysqli_num_rows($pr_result);
 
-    $total_page = ceil($total_record/$num_per_page);
+    $total_page = ceil($total_record / $num_per_page);
 
     if ($page > 1) {
-        echo "<li class='page-item'><a class='page-link' style='background-color: #5CDB95; color: white;' href='organization.php?page=".($page-1)."'>Previues</a></li>";
+        echo "<li class='page-item'><a class='page-link' style='background-color: #5CDB95; color: white;' href='organization.php?page=" . ($page - 1) . "'>Previues</a></li>";
     }
 
     for ($i = 1; $i < $total_page; $i++) {
         echo "<li class='page-item'><a class='page-link' style='color:#5CDB95' href='organization.php?page=" . $i . "'>$i</a></li>";
     }
-    
 
-    
+
+
     if ($i > $page) {
         echo "<li class='page-item'><a class='page-link' style='background-color: #5CDB95; color: white;' href='organization.php?page=" . ($page + 1) . "'>Next</a></li>";
     }

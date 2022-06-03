@@ -24,7 +24,7 @@ if (isset($_POST['post_E'])) {
 
             $sql = "INSERT INTO `events` (event_name,event_description,org_id,event_start_date,event_end_date) VALUES ('$event_name','$event_desc','$org_id','$event_start_date','$event_end_date')";
             $result = mysqli_query($conn, $sql);
-            if ($result > 0) {
+            if ($result) {
                 $success_message = "Event Posted";
             }
         } else {

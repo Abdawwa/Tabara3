@@ -61,7 +61,7 @@ if (isset($_POST['submit'])) {
                         ?>
 
                         <div class="card col-lg-4 col-md-6">
-                            <img class="card-img-top" src="images/img1.jpg">
+                            <img class="card-img-top" src="images/<?php echo $row['event_img']?>">
                             <div class="card-body">
                                 <h5 class="card-title"><?php echo $row['event_name'] ?></h5>
                                 <span><?php echo $row['event_created_at'] ?></span>

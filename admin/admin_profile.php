@@ -36,7 +36,7 @@ $result3 = mysqli_query($conn, $sql3);
             ?>
 
                     <div class="card col-lg-4 col-md-6">
-                        <img class="card-img-top img-fluid" src="../images/<?php echo $row3['event_img'] ?>">
+                        <img class="card-img-top" width="300px" height="300px" src="../images/<?php echo $row3['event_img'] ?>">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $row3['event_name'] ?></h5>
                             <span><?php echo $row3['event_created_at'] ?></span>

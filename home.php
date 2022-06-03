@@ -91,7 +91,7 @@ if (isset($_POST['submit'])) {
                 while ($row = mysqli_fetch_array($result)) {
             ?>
                     <div class="card col-lg-4 col-md-6">
-                        <img class="card-img-top" src="images/img1.jpg">
+                        <img class="card-img-top" src="images/<?php echo $row['event_img']?>">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $row['event_name'] ?></h5>
                             <span><?php echo $row['event_created_at'] ?></span>
@@ -138,9 +138,9 @@ if (isset($_POST['submit'])) {
 
                     <div class="card col-lg-4 col-md-6">
                         <div class="card-body">
-                            <img src="images/img1.jpg">
+                            <img width="300px" height="300px" src="images/<?php echo $row2['org_img']?>">
                             <h3 class="card-title"><?php echo $row2['org_name'] ?></h3>
-                            <a class="don-btn" href="<?php echo $row2['org_link'] ?>" target="_blank">donate now</a>
+                            <a class="don-btn" href="paypal.php" target="_blank">donate</a>
                         </div>
                     </div>
 
@@ -155,25 +155,6 @@ if (isset($_POST['submit'])) {
     </div>
 </div>
 <!--------------------------------Organizations ---------------------------------->
-
-<!--------------------------------Choose Us Section---------------------------------->
-<!--<div class="Choose-Us">
-    <div class="container">
-        <div class=" col-md-6 box">
-            <div class="content">
-                <div class="text">
-                    <h1>Why Choose Us</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quibusdam culpa aliquid
-                        distinctio, quia magnam rem dolor facere impedit error aliquam accusamus deleniti inventore
-                        eaque architecto perspiciatis rerum, soluta illum!</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum eaque sint itaque, disti</p>
-                    <button>view more</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>-->
-<!--------------------------------Choose Us Section---------------------------------->
 <!--------------------------------Statistics Section---------------------------------->
 <div class="Statistics">
     <div class="container">
