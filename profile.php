@@ -16,6 +16,7 @@ $user_id = $info['id'];
 
 $event_enrolled_query = "SELECT DISTINCT enrolled_events.event_attendance ,enrolled_events.event_id , events.event_name , events.event_description , events.event_img , events.event_start_date , events.event_end_date FROM `enrolled_events` INNER JOIN events ON enrolled_events.event_id = events.event_id WHERE `user_id`='$user_id'";
 $result2 = mysqli_query($conn, $event_enrolled_query);
+
 ?>
 <!--user info-->
 <div class="profile">
@@ -55,7 +56,8 @@ $result2 = mysqli_query($conn, $event_enrolled_query);
     <div class="d-flex justify-content-between">
         <h4>Enrolled Events</h4>
     </div>
-    <div class="card-deck">
+
+    <div class="d-flex flex-wrap">
         <?php if (mysqli_num_rows($result2) > 0) {
             while ($info2 = mysqli_fetch_array($result2)) {
         ?>
@@ -74,6 +76,7 @@ $result2 = mysqli_query($conn, $event_enrolled_query);
         <?php }
         } ?>
     </div>
+
 </div>
 <?php
 if (isset($_POST['submit'])) {
@@ -142,6 +145,9 @@ if (isset($_POST['submit'])) {
         $("#profile-settings").toggle();
     });
 </script>
+
+
 <?php
+
 include "footer.php";
 ?>
