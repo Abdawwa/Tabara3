@@ -2,7 +2,7 @@
 $serverName = "localhost";
 $dbuser = "root";
 $password = "";
-$dbname = "new_tabara3";
+$dbname = "tabara3_new";
 
 define('PAYPAL_ID', 'sb-jfsro16588172@business.example.com');
 define('PAYPAL_SANDBOX', TRUE); //TRUE or FALSE
